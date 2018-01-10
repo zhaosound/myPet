@@ -37,10 +37,14 @@ class User
     private $password;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Pet", mappedBy="user")
+     * @ORM\OneToMany(targetEntity="App\Entity\Pet", mappedBy="owner")
      */
     private $pets;
 
+    public function __toString()
+    {
+        return $this->getName();
+    }
 
     public function __construct()
     {

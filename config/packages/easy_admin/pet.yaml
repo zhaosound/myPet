@@ -1,0 +1,7 @@
+easy_admin:
+    entities:
+        User:
+            class: App\Entity\Pet
+            label: 'pet'
+            list:
+                title: "明细"

@@ -41,6 +41,12 @@ class Pet
      */
     private $owner;
 
+
+    public function __toString()
+    {
+        return $this->getName();
+    }
+
     /**
      * @return mixed
      */
@@ -114,7 +120,7 @@ class Pet
     }
 
     /**
-     * @return mixed
+     * @return User
      */
     public function getOwner()
     {
@@ -122,9 +128,9 @@ class Pet
     }
 
     /**
-     * @param mixed $owner
+     * @param User $owner
      */
-    public function setOwner($owner): void
+    public function setOwner(User $owner): void
     {
         $this->owner = $owner;
     }
