@@ -128,6 +128,11 @@ class User implements UserInterface, \Serializable
     public function serialize()
     {
         // TODO: Implement serialize() method.
+        return serialize([
+            $this->id,
+            $this->username,
+            $this->password
+        ]);
     }
 
     /**
@@ -143,7 +148,12 @@ class User implements UserInterface, \Serializable
     public function unserialize($serialized)
     {
         // TODO: Implement unserialize() method.
-}
+        list (
+            $this->id,
+            $this->username,
+            $this->password,
+            ) = unserialize($serialized);
+    }
 
     /**
      * Returns the roles granted to the user.
