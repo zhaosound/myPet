@@ -37,12 +37,6 @@ class User implements UserInterface, \Serializable
     private $email;
 
     /**
-     * @Assert\NotBlank()
-     * @Assert\Length(max=4096)
-     */
-    private $plainPassword;
-
-    /**
      * @ORM\Column(type="string")
      */
     private $password;
@@ -208,21 +202,5 @@ class User implements UserInterface, \Serializable
     public function eraseCredentials()
     {
         // TODO: Implement eraseCredentials() method.
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPlainPassword()
-    {
-        return $this->plainPassword;
-    }
-
-    /**
-     * @param mixed $plainPassword
-     */
-    public function setPlainPassword($plainPassword): void
-    {
-        $this->plainPassword = $plainPassword;
     }
 }
