@@ -1,4 +1,8 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-    <h1>123123</h1>
+    <div>
+        welcome: {{ app.user.username }}!
+    </div>
+
+    <h1>测试webpack打包css/js,这里应该是红色</h1>
 {% endblock %}
