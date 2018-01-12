@@ -3,6 +3,11 @@
     <div>
         welcome: {{ app.user.username }}!
     </div>
-
+    <div>
+        {{ form_start(form) }}
+        {{ form_rest(form) }}
+        <input type="submit" value="提交"/>
+        {{ form_end(form) }}
+    </div>
     <h1>测试webpack打包css/js,这里应该是红色</h1>
 {% endblock %}
